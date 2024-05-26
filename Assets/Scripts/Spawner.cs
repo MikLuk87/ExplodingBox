@@ -1,11 +1,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Box))]
+[RequireComponent(typeof(Exploder))]
+[RequireComponent(typeof(Rigidbody))]
+
 public class Spawner : MonoBehaviour
 {
-    [SerializeField] private float _reduction = 2f;
 
-    private static System.Random s_random = new System.Random();
+    [SerializeField] private float _reduction = 2f;
 
     private Box _box;
     private Exploder _explosives;
@@ -18,11 +21,11 @@ public class Spawner : MonoBehaviour
     {
         GameObject newBox;
         List<Rigidbody> explodebleObjects = new List<Rigidbody>();
-        
+
         _box = GetComponent<Box>();
         _explosives = GetComponent<Exploder>();
 
-        if (s_random.Next(0, _maxRandom) <= _box.SpawnChance)
+        if (Random.Range(0, _maxRandom) <= _box.SpawnChance)
         {
             transform.localScale /= _reduction;
             _box.SpawnChance /= _reduction;

@@ -159,6 +159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6b0cbb6b2d32174d8b581c7b96ae323, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _reduction: 2
 --- !u!114 &170651400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -297,7 +298,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13136c77bfb3c894ea5d7ced79bd0deb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ExplodebleObjects: []
   _explosionRadius: 20
   _explosionForce: 200
 --- !u!114 &170651407
@@ -671,13 +671,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.40165687, y: -0, z: -0, w: 0.91579026}
-  m_LocalPosition: {x: 0, y: 21, z: -20.6}
+  m_LocalRotation: {x: 0.65272266, y: -0, z: -0, w: 0.75759697}
+  m_LocalPosition: {x: 0, y: 27.54, z: -5.36}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 47.364, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 81.494, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

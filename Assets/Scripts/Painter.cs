@@ -1,9 +1,9 @@
 using UnityEngine;
 
+[RequireComponent(typeof(Renderer))]
+
 public class Painter : MonoBehaviour
 {
-    private static System.Random s_random = new System.Random();
-
     private void Start()
     {
         GetComponent<Renderer>().material.color = GetRandomColor();
@@ -17,6 +17,6 @@ public class Painter : MonoBehaviour
              Color.green,
              Color.yellow};
 
-        return colors[s_random.Next(0, colors.Length)];
+        return colors[Random.Range(0, colors.Length)];
     }
 }
