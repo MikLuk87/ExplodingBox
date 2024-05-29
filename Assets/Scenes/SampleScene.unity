@@ -136,9 +136,7 @@ GameObject:
   - component: {fileID: 170651402}
   - component: {fileID: 170651401}
   - component: {fileID: 170651400}
-  - component: {fileID: 170651396}
   - component: {fileID: 170651405}
-  - component: {fileID: 170651406}
   - component: {fileID: 170651407}
   m_Layer: 0
   m_Name: Cube
@@ -147,19 +145,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &170651396
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 170651395}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6b0cbb6b2d32174d8b581c7b96ae323, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _reduction: 2
 --- !u!114 &170651400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,7 +157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69d35d62f7ce6c9408b2501225ea3aa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnChance: 100
+  _spawnChance: 100
 --- !u!65 &170651401
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -253,7 +238,7 @@ Transform:
   m_GameObject: {fileID: 170651395}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 2.19, z: -1.8}
+  m_LocalPosition: {x: 0.01, y: 1.7, z: 0.1}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -286,20 +271,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &170651406
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 170651395}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13136c77bfb3c894ea5d7ced79bd0deb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _explosionRadius: 20
-  _explosionForce: 200
 --- !u!114 &170651407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -327,6 +298,8 @@ GameObject:
   - component: {fileID: 236806552}
   - component: {fileID: 236806551}
   - component: {fileID: 236806550}
+  - component: {fileID: 236806554}
+  - component: {fileID: 236806555}
   m_Layer: 0
   m_Name: Terrain
   m_TagString: Untagged
@@ -492,6 +465,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 15.652531, z: 30.42809}
   m_Center: {x: 0, y: 7.3262653, z: 14.714045}
+--- !u!114 &236806554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 236806546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13136c77bfb3c894ea5d7ced79bd0deb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _explosionRadius: 20
+  _explosionForce: 200
+--- !u!114 &236806555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 236806546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6b0cbb6b2d32174d8b581c7b96ae323, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _reduction: 2
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
