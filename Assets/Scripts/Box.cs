@@ -4,23 +4,33 @@ using UnityEngine;
 
 public class Box : MonoBehaviour
 {
-    [SerializeField, Range(1, 100)] private float _spawnChance = 100f;
-
-    public float GetSpawnChance()
-    {
-        return _spawnChance;
-    }
-
-    public void SetSpawnChance(float spawnChance)
-    {
-        _spawnChance = spawnChance;
-    }
+    [SerializeField, Range(1, 200)] private float _spawnChance = 200f;
+    [SerializeField] private float _reduction = 2f; 
 
     private void OnMouseDown()
     {
         Spawner spawner = new Spawner();
 
-        spawner.Split(GetComponent<Box>());
+        spawner.Spawn(this);
         Destroy(gameObject);
+    }
+
+    public float SpawnChance()
+    {
+        return _spawnChance;
+    }
+
+    private void Start()
+    {
+        Exploder exploder = new Exploder();
+        
+        Initialize();
+        exploder.AddToExplosionList(GetComponent<Rigidbody>());
+    }
+
+    private void Initialize()
+    {
+        _spawnChance /= _reduction;
+        transform.localScale /= _reduction;
     }
 }

@@ -17,12 +17,7 @@ public class Exploder : MonoBehaviour
         _explosionBoxes.Clear();
     }
 
-    public List<Rigidbody> GetExplosionBoxes()
-    {
-        return _explosionBoxes;
-    }
-
-    public void SetExplosionBoxes(Rigidbody rigidbody)
+    public void AddToExplosionList(Rigidbody rigidbody)
     {
         _explosionBoxes.Add(rigidbody);
     }
