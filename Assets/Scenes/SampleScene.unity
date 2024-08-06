@@ -138,6 +138,7 @@ GameObject:
   - component: {fileID: 170651400}
   - component: {fileID: 170651405}
   - component: {fileID: 170651407}
+  - component: {fileID: 170651408}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -190,7 +191,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
+  m_DynamicOccludee: 0
   m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -284,6 +285,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d148f86abbc62b147b536def3667e687, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &170651408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 170651395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6b0cbb6b2d32174d8b581c7b96ae323, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &236806546
 GameObject:
   m_ObjectHideFlags: 0
@@ -299,7 +312,6 @@ GameObject:
   - component: {fileID: 236806552}
   - component: {fileID: 236806551}
   - component: {fileID: 236806550}
-  - component: {fileID: 236806554}
   m_Layer: 0
   m_Name: Terrain
   m_TagString: Untagged
@@ -465,20 +477,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 15.652531, z: 30.42809}
   m_Center: {x: 0, y: 7.3262653, z: 14.714045}
---- !u!114 &236806554
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 236806546}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13136c77bfb3c894ea5d7ced79bd0deb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _explosionForce: 100
-  _explosionBoxes: []
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
