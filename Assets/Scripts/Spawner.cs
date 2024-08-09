@@ -9,14 +9,17 @@ public class Spawner : MonoBehaviour
 
     public void Spawn(Box box)
     {
-        if (Random.Range(0, _maxRandom) <= box.SpawnChance())
+        if (Random.Range(0, _maxRandom) <= box.SpawnChance)
         {
-            GameObject explodebleBox;
+            Rigidbody parentRb = box.GetRigidbody();
+            Rigidbody childrenRb;
 
-            for (int i = 0; i < Random.Range(_minQuantity, _maxQuantity); i++)
+            int randomQuantity = Random.Range(_minQuantity, _maxQuantity);
+
+            for (int i = 0; i < randomQuantity; i++)
             {
-                explodebleBox = Instantiate(box.gameObject, box.transform.position, box.transform.rotation);
-                explodebleBox.GetComponent<Rigidbody>().AddForce(Random.Range(_explodeForce * -1, _explodeForce), Random.Range(0, _explodeForce), Random.Range(_explodeForce * -1, _explodeForce));
+                childrenRb = Instantiate(parentRb, box.transform.position, box.transform.rotation);
+                childrenRb.AddForce(Random.Range(_explodeForce * -1, _explodeForce), Random.Range(0, _explodeForce), Random.Range(_explodeForce * -1, _explodeForce));
             }
         }
     }
